@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="IMC"/>
+        <attribute name="authors" value="Alvaro"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-07 08:01:29 a. m."/>
+        <attribute name="created" value="QWx2YXJvO0xBUFRPUC1PS1ZERzdEVDsyMDI1LTA0LTA2OzA5OjM1OjAxIHAuIG0uOzMxNzc="/>
+        <attribute name="edited" value="QWx2YXJvO0xBUFRPUC1PS1ZERzdEVDsyMDI1LTA0LTA3OzA4OjAxOjI5IGEuIG0uOzE7MzI3Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="P" type="Real" array="False" size=""/>
+            <declare name="H" type="Real" array="False" size=""/>
+            <declare name="IMC" type="Real" array="False" size=""/>
+            <output expression="&quot;INGRESE EL PESO EN KG&quot;" newline="True"/>
+            <input variable="P"/>
+            <output expression="&quot;INGRESE LA ESTATURA EN M&quot;" newline="True"/>
+            <input variable="H"/>
+            <assign variable="IMC" expression="P/(H*H)"/>
+            <if expression="IMC&gt;=40.0">
+                <then>
+                    <output expression="&quot;EL IMC ES DE: &quot;&amp;IMC&amp;&quot; POR LO QUE SE DIAGNOSTICA OBESIAD FASE 3&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="IMC&gt;=35.0">
+                        <then>
+                            <output expression="&quot;EL IMC ES DE: &quot;&amp;IMC&amp;&quot; POR LO QUE SE DIAGNOSTICA OBESIAD FASE 2&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="IMC&gt;=30.0">
+                                <then>
+                                    <output expression="&quot;EL IMC ES DE: &quot;&amp;IMC&amp;&quot; POR LO QUE SE DIAGNOSTICA OBESIDAD FASE 1&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="IMC&gt;=25.0">
+                                        <then>
+                                            <output expression="&quot; EL IMC ES DE: &quot;&amp;IMC&amp;&quot; POR LO QUE SE DIAGNOSTICA SOBREPESO&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="IMC&gt;=18.5">
+                                                <then>
+                                                    <output expression="&quot;EL IMC ES DE : &quot;&amp;IMC&amp;&quot; POR LO QUE SE DIAGNOSTICA UN PESO IDEAL&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;EL IMC ES DE: &quot;&amp;IMC&amp;&quot; POR LO QUE NO ESTA EN EL PESO IDEAL&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
