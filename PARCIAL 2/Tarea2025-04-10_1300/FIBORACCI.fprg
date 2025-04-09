@@ -4,25 +4,25 @@
         <attribute name="name" value="FIBORACCI"/>
         <attribute name="authors" value="Alvaro"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-04-09 03:58:08 p. m."/>
+        <attribute name="saved" value="2025-04-09 04:19:29 p. m."/>
         <attribute name="created" value="QWx2YXJvO0xBUFRPUC1PS1ZERzdEVDsyMDI1LTA0LTA5OzAzOjExOjMzIHAuIG0uOzMxNzM="/>
-        <attribute name="edited" value="QWx2YXJvO0xBUFRPUC1PS1ZERzdEVDsyMDI1LTA0LTA5OzAzOjU4OjA4IHAuIG0uOzE7MzI5NA=="/>
+        <attribute name="edited" value="QWx2YXJvO0xBUFRPUC1PS1ZERzdEVDsyMDI1LTA0LTA5OzA0OjE5OjI5IHAuIG0uOzI7MzI5Ng=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="N1" type="Integer" array="False" size=""/>
-            <declare name="N2" type="Integer" array="False" size=""/>
-            <declare name="R" type="Integer" array="False" size=""/>
+            <declare name="A1" type="Integer" array="False" size=""/>
+            <declare name="B2" type="Integer" array="False" size=""/>
+            <declare name="C" type="Integer" array="False" size=""/>
             <declare name="CONTADOR" type="Integer" array="False" size=""/>
-            <assign variable="N1" expression="1"/>
-            <assign variable="N2" expression="0"/>
+            <assign variable="A1" expression="1"/>
+            <assign variable="B2" expression="0"/>
             <assign variable="CONTADOR" expression="0"/>
             <while expression="CONTADOR&lt;64">
-                <assign variable="R" expression="N1"/>
-                <assign variable="N1" expression="N1+N2"/>
-                <assign variable="N2" expression="R"/>
-                <output expression="N1" newline="True"/>
+                <assign variable="C" expression="A1"/>
+                <assign variable="A1" expression="A1+B2"/>
+                <assign variable="B2" expression="C"/>
+                <output expression="A1" newline="True"/>
                 <assign variable="CONTADOR" expression="CONTADOR+1"/>
             </while>
         </body>
